@@ -1,0 +1,39 @@
+.button, button{
+    background-color: transparent;
+    border: 2px solid $primaryButton;
+    color: $primaryButton;
+    cursor: pointer;
+    display: inline-block;
+    font: {
+        family: $font-quicksandBold;
+        size: $button-fontSize;
+    };
+    letter-spacing: 2px;
+    max-width: 240px;
+    padding: 10px 20px;
+    text-align:center;
+    text-decoration: none!important;
+    text-transform: uppercase;
+    width: 100%;
+    @include border-radius(5px);
+    &:hover, &:focus{
+        border-color: $primaryButtonHover;
+        color: $primaryButtonHover;
+    }
+    &-primary{
+        background-color: $pink;
+        color: $white;
+        &:hover, &:focus{
+            background-color:transparent;
+            border-color: $pink;
+            color: $pink;
+        }
+    }
+}
+
+@media screen and(max-width: 640px){
+    .button, button{
+        font-size: 12px;
+        max-width: 190px;
+    }
+}

@@ -1,0 +1,63 @@
+h1{
+	text-align: center;
+}
+.linkText{
+	color: $pink;
+}
+.loginForm{
+	padding: 60px 0px;
+	position: relative;
+	z-index: 1;
+}
+
+.banner{
+	@include display-flex;
+	@include justify-content(center);
+	@include align-items(center);
+	position: relative;
+	&:before{
+		content: "";
+		background-color: rgba(14, 14, 14, 0.5);
+		@include position(absolute, $left:0, $top: 0, $bottom:0, $right:0);
+	}
+	&:after{
+		content: "";
+	    background-image: url('#{$relative-path}/img/splitter.png');
+	    background-repeat: repeat-x;
+	    background-size: 30px;
+	    position: absolute;
+	    bottom: -45px;
+	    left: 0;
+	    height: 50px;
+	    width: 100%;
+	    z-index: 1;
+	}
+	&-subpage{
+		background-image: url('#{$relative-path}/img/banner-activation-forgot.png');
+	    background-position: center;
+	    background-size: cover;
+		min-height: 350px;
+	}
+	&-caption{
+		text-align: center;
+		position: relative;
+		z-index: 2;
+		p, h2{
+			color: $white;
+		}
+	}
+}
+.dropShadow{
+	background: #f1f1f1;
+    padding: 40px;
+    box-shadow: -1px 7px 24px #dfdede;
+    border-radius: 15px;
+}
+.mt100{
+	margin-top: -100px;
+}
+@media screen and (max-width:640px) {
+	[class*="col-"] {
+		max-width: 100%;
+	}
+}
